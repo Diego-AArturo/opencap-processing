@@ -52,8 +52,10 @@ import utilsKinematics
 
 # OpenCap session information from url.
 # View example at https://app.opencap.ai/session/9eea5bf0-a550-4fa5-bc69-f5f072765848
-session_id = '9eea5bf0-a550-4fa5-bc69-f5f072765848'
-trial_name = 'jump2'
+# session_id = '9eea5bf0-a550-4fa5-bc69-f5f072765848'
+session_id = 'da9fcf0a-3ec2-4990-b1e5-7f0d8dec5d38' # da9fcf0a-3ec2-4990-b1e5-7f0d8dec5d38
+# trial_name = 'jump2'
+trial_name = 'estocada_izquierda_1'
 # Specify where to download the kinematic data. Make sure there are no spaces
 # in this path.
 data_folder = os.path.abspath(os.path.join(script_folder,'Data', session_id))
@@ -61,18 +63,27 @@ data_folder = os.path.abspath(os.path.join(script_folder,'Data', session_id))
 # Path and filename for force data. Should be a *.mot file of forces applied
 # to right and left foot.
 force_dir = os.path.join(data_folder,'MeasuredForces',trial_name)
-force_path = os.path.join(force_dir,'jump2_forces_filt30Hz.mot')
+force_path = os.path.join(force_dir,f'{trial_name}_forces.mot')
+# force_path = os.path.join(force_dir,f'{trial_name}.mot')
 
 # Download force data from gdrive: this is only for this example. This section
 # can be deleted if your force_path points to a local file.
 os.makedirs(force_dir,exist_ok=True)
-force_gdrive_url = 'https://drive.google.com/uc?id=1Uppzkskn7OiJ5GncNT2sl35deX_U3FTN&export=download'
+
+# if not os.path.exists(force_path):
+#     raise FileNotFoundError(f"El archivo de fuerzas {force_path} no se encontró. Verifica la ruta.")
+
+
+# force_gdrive_url = 'https://drive.google.com/uc?id=1Uppzkskn7OiJ5GncNT2sl35deX_U3FTN&export=download'
+# --------usar si es web------------------------
+force_gdrive_url = 'https://drive.usercontent.google.com/u/2/uc?id=1-8bc4yZv0Ot8i0D6cczgXXQPBCyFrdCy&export=download'
 response = requests.get(force_gdrive_url)
 with open(force_path, 'wb') as f:
-    f.write(response.content)      
+    f.write(response.content)  
+# ---------------------------------------------    
 
 # Lowpass filter ground forces and kinematics 
-lowpass_filter_frequency = 30
+lowpass_filter_frequency = 30#50
 filter_force_data = True
 filter_kinematics_data = True
 
@@ -105,7 +116,7 @@ R_forcePlates_to_C = {'R':R.from_euler('y',-90,degrees=True),
                       'L':R.from_euler('y',-90,degrees=True)}
 
 # Flags
-visualize_synchronization = False # visualize kinematic/force synchronization
+visualize_synchronization = True # visualize kinematic/force synchronization
 run_ID = True
 
 # %% Functions
@@ -113,6 +124,8 @@ run_ID = True
 def get_columns(list1,list2):
     inds = [i for i, item in enumerate(list2) if item in list1]
     return inds           
+
+#para verificar frecuencias de corte
 
 # %% Load and transform force data
 # We will transform the force data into the OpenCap reference frame. We will
@@ -149,6 +162,7 @@ force_headers = forces_structure.dtype.names
 # Filter force data
 # Note - it is not great to filter COP data directly. In the example GRF data
 # we filtered raw forces and moments before computing COP.
+
 if filter_force_data:
     force_data[:,1:] = lowPassFilter(force_data[:,0], force_data[:,1:],
                                  lowpass_filter_frequency, order=4)
@@ -170,8 +184,8 @@ for leg in ['R','L']:
     force_columns = get_columns([leg + '_ground_force_p' + d for d in directions],force_headers)
     r_forceOrigin_to_COP_exp_C = force_data[:,force_columns]
     r_G0_to_COP_exp_G = ( r_G0_to_C0_expC + 
-                          r_C0_to_forceOrigin_exp_C[leg] + 
-                          r_forceOrigin_to_COP_exp_C )
+                        r_C0_to_forceOrigin_exp_C[leg] + 
+                        r_forceOrigin_to_COP_exp_C )
     force_data[:,force_columns] = r_G0_to_COP_exp_G
 
 ## Time synchronize
@@ -181,48 +195,144 @@ force_columns = get_columns([leg + '_ground_force_vy' for leg in ['R','L']],forc
 forces_for_cross_corr = np.sum(force_data[:,force_columns],axis=1,keepdims=True)
 
 framerate_forces = 1/np.diff(force_data[:2,0])[0]
-framerate_kinematics = 1/np.diff(kinematics.time[:2])[0]
-time_forces_downsamp, forces_for_cross_corr_downsamp = ut.downsample(forces_for_cross_corr,
-                                                                     force_data[:,0],
-                                                                     framerate_forces,
-                                                                     framerate_kinematics)
-forces_for_cross_corr_downsamp = lowPassFilter(time_forces_downsamp,
-                                               forces_for_cross_corr_downsamp,
-                                               4, order=4)
 
+framerate_kinematics = 1/np.diff(kinematics.time[:2])[0]
+
+print(f"Framerate de las fuerzas: {framerate_forces}")
+print(f"Framerate de la cinemática: {framerate_kinematics}")
+
+time_forces_downsamp, forces_for_cross_corr_downsamp = ut.downsample(forces_for_cross_corr,
+                                                                    force_data[:,0],
+                                                                    framerate_forces,
+                                                                    framerate_kinematics)
+# print('time_forces_downsamp',time_forces_downsamp)
+forces_for_cross_corr_downsamp = lowPassFilter(time_forces_downsamp,
+                                            forces_for_cross_corr_downsamp,
+                                            4, order=4)
+# print(f'shape of forces_for_cross_corr_downsamp {forces_for_cross_corr_downsamp.shape}')
 # get body mass from metadata
 mass = opencap_metadata['mass_kg']
 
 # zero pad the shorter signal
+#--------------original-----------------------------
+# dif_lengths = len(forces_for_cross_corr_downsamp) - len(center_of_mass_acc['y'])
+# if dif_lengths > 0:
+#     com_signal = np.pad(center_of_mass_acc['y']*mass + mass*9.8, 
+#                         (int(np.floor(dif_lengths / 2)), 
+#                         int(np.ceil(dif_lengths / 2))), 
+#                         'constant',constant_values=0)[:,np.newaxis]
+        
+#     kinematics_pad_length = int(np.floor(dif_lengths / 2))
+#     force_signal = forces_for_cross_corr_downsamp
+#     print('longer is force')
+#     print("force signal",force_signal.shape)
+# else:
+#     force_signal = np.pad(forces_for_cross_corr_downsamp, 
+#                           (int(np.floor(np.abs(dif_lengths) / 2)), 
+#                           int(np.ceil(np.abs(dif_lengths) / 2))), 
+#                           'constant', constant_values=0)
+#     print(f'shape of dif_lengths: {dif_lengths}')
+#     print('longer is center_of_mass')
+#     print(f"Shape of center_of_mass_acc: {center_of_mass_acc.shape}")
+#     print("force signal",force_signal.shape)
+#     kinematics_pad_length = 0
+#     # com_signal = center_of_mass_acc['y'].to_numpy()[:, np.newaxis] * mass + mass * 9.8
+#     com_signal = center_of_mass_acc['y'].values[:,np.newaxis]*mass + mass*9.8
+#--------------------------------------------------------------------------
+#----------------------modificado--------------------------------------------
+# Calculamos la diferencia de longitudes entre las señales
 dif_lengths = len(forces_for_cross_corr_downsamp) - len(center_of_mass_acc['y'])
+
 if dif_lengths > 0:
-    com_signal = np.pad(center_of_mass_acc['y']*mass + mass*9.8, 
+    # forces_for_cross_corr_downsamp es más largo, entonces debemos ajustar com_signal
+    com_signal = np.pad(center_of_mass_acc['y'] * mass + mass * 9.8, 
                         (int(np.floor(dif_lengths / 2)), 
                         int(np.ceil(dif_lengths / 2))), 
-                        'constant',constant_values=0)[:,np.newaxis]
-    kinematics_pad_length = int(np.floor(dif_lengths / 2))
+                        'constant', constant_values=0)[:, np.newaxis]
+    
     force_signal = forces_for_cross_corr_downsamp
-else:
+    kinematics_pad_length = int(np.floor(dif_lengths / 2))
+    
+    # print('forces_for_cross_corr_downsamp es más largo que com_signal')
+    # print("Shape of com_signal:", com_signal.shape)
+    # print("Shape of force_signal:", force_signal.shape)
+
+elif dif_lengths < 0:
+    # center_of_mass_acc['y'] es más largo, entonces debemos ajustar forces_for_cross_corr_downsamp
+    # print(f"Shape of forces_for_cross_corr_downsamp before padding: {forces_for_cross_corr_downsamp.shape}")
+    force_signal =forces_for_cross_corr_downsamp
+    # print(force_signal.shape)
+    # force_signal = np.pad(np.squeeze(forces_for_cross_corr_downsamp), 
+    #                     (int(np.floor(np.abs(dif_lengths) / 2)), 
+    #                     int(np.ceil(np.abs(dif_lengths) / 2))), 
+    #                     'constant', constant_values=0)
     force_signal = np.pad(forces_for_cross_corr_downsamp, 
-                          (int(np.floor(np.abs(dif_lengths) / 2)), 
-                          int(np.ceil(np.abs(dif_lengths) / 2))), 
-                          'constant', constant_values=0)
+                      ((int(np.floor(np.abs(dif_lengths) / 2)), 
+                        int(np.ceil(np.abs(dif_lengths) / 2))), 
+                       (0, 0)),  # No modificar las columnas
+                      'constant', constant_values=0)
+
+    # print(f"Shape of force_signal after padding: {force_signal.shape}")
+    
+    com_signal = center_of_mass_acc['y'].values[:, np.newaxis] * mass + mass * 9.8
     kinematics_pad_length = 0
-    com_signal = center_of_mass_acc['y'][:,np.newaxis]*mass + mass*9.8
+    # force_signal = force_signal[:, 0] #linea nueva
+    # print('center_of_mass_acc es más largo que forces_for_cross_corr_downsamp')
+    # print("Shape of com_signal:", com_signal.shape)
+    
+
+else:
+    # Las longitudes ya son iguales, no es necesario hacer padding
+    com_signal = center_of_mass_acc['y'][:, np.newaxis] * mass + mass * 9.8
+    force_signal = forces_for_cross_corr_downsamp
+    kinematics_pad_length = 0
+    
+    # print('Las señales ya tienen la misma longitud')
+    # print("Shape of com_signal:", com_signal.shape)
+    # print("Shape of force_signal:", force_signal.shape)
+#----------------------------------------------------------------------------------------
+
+
+
+# Asegúrate de que com_signal y force_signal no tengan dimensiones adicionales (squeeze)
 
 # compute the lag between GRFs and forces
-_,lag = ut.cross_corr(np.squeeze(com_signal),np.squeeze(force_signal), 
-                      visualize=visualize_synchronization)
+#print("info_com",com_signal)
+# print('---Before of squeeze-----')
+# print(f"type of com_signal: {type(com_signal)}")
+# print(f"Shape of com_signal: {com_signal.shape}")
+# print(f"type of force_signal: {type(force_signal)}")
+# print(f"Shape of force_signal: {force_signal.shape}")
+# com_signal = np.squeeze(com_signal)
+# force_signal = np.squeeze(force_signal)
+# print('---After of squeeze-----')
+# print(f"type of com_signal: {type(com_signal)}")
+# print(f"Shape of com_signal: {com_signal.shape}")
+# print(f"type of force_signal: {type(force_signal)}")
+# print(f"Shape of force_signal: {force_signal.shape}")
+
+# _,lag = ut.cross_corr(np.squeeze(com_signal),np.squeeze(force_signal),
+#                     visualize=visualize_synchronization)
+# lag = lag*0.1
+_,lag = ut.cross_corr_improved(np.squeeze(com_signal),np.squeeze(force_signal),
+                                multCorrGaussianStd=50, window_size=1000, use_fft=True, visualize=True)
+
+print(f"Calculated lag: {lag}")
 
 force_data_new = np.copy(force_data)
 force_data_new[:,0] = force_data[:,0] - (-lag+kinematics_pad_length)/framerate_kinematics
+desplazamiento_derecha = 1.7  # Ajusta este valor según el desplazamiento deseado
 
+# Aplica el desplazamiento al tiempo de los datos de fuerza
+force_data_new[:,0] = force_data_new[:, 0] + desplazamiento_derecha
 # Plot vertical force and (COM acceleration*m +mg)
 if visualize_synchronization:
+    print("vizulize")
     plt.figure()
     plt.plot(kinematics.time,center_of_mass_acc['y']*mass + mass*9.8,label='COM acceleration')
     plt.plot(force_data_new[:,0],forces_for_cross_corr, label = 'vGRF')
     plt.legend()
+    plt.show()
 
 # Force data directories
 force_folder = os.path.join(data_folder,'MeasuredForces',trial_name)
@@ -238,6 +348,15 @@ ut.numpy_to_storage(force_headers, force_data_new, force_output_path, datatype=N
 time_range = {}
 time_range['start'] = np.max([force_data_new[0,0], kinematics.time[0]])
 time_range['end'] = np.min([force_data_new[-1,0], kinematics.time[-1]])
+
+print('time start of force',force_data_new[0,0])
+print('time start of kinematics',kinematics.time[0])
+
+print('time end of force',force_data_new[-1,0])
+print('time end of kinematics',kinematics.time[-1])
+
+print('time_range star',time_range['start'])
+print('time_range end',time_range['end'])
 
 # %% Run Inverse Dynamics
 
@@ -290,7 +409,7 @@ id_output_path = os.path.join(id_folder,trial_name + '.sto')
 id_dataframe = ut.load_storage(id_output_path,outputFormat='dataframe')
 
 force_dataframe = pd.DataFrame(force_data_new, columns=force_headers)
-
+# print(force_dataframe)
 # Select columns to plot
 sagittal_dofs = ['ankle_angle','knee_angle','hip_flexion']
 kinematics_columns_plot = [s + '_' + leg for s in sagittal_dofs for leg in ['r','l']]
@@ -299,13 +418,14 @@ force_columns_plot = [leg + '_ground_force_v' + dir for leg in ['R','L']
                                                   for dir in ['x','y','z']]
 
 # Make plots
-plt.close('all')
-plot_dataframe([kinematics.get_coordinate_values()], xlabel='time', ylabel='angle [deg]',
-               y = kinematics_columns_plot ,title='Kinematics')
+# plt.close('all')
+# plot_dataframe([kinematics.get_coordinate_values()], xlabel='time', ylabel='angle [deg]',
+#                y = kinematics_columns_plot ,title='Kinematics')
 
-plot_dataframe([id_dataframe], xlabel='time', ylabel='moment [Nm]',
-               y = moment_columns_plot ,title='Moments')
+# plot_dataframe([id_dataframe], xlabel='time', ylabel='moment [Nm]',
+#                y = moment_columns_plot ,title='Moments')
 
-plot_dataframe([force_dataframe], xlabel='time', ylabel='force [N]',
-               y = force_columns_plot ,title='Ground Forces',xrange=list(time_range.values()))
+# plot_dataframe([force_dataframe], xlabel='time', ylabel='force [N]',
+#                y = force_columns_plot ,title='Ground Forces',xrange=list(time_range.values()))
+
 
