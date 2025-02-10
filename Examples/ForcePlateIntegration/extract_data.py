@@ -84,33 +84,33 @@ data = [
             [5.85, 10.933, 14.283]   # sentadilla_90  5.85	10.92	14.283
         ]
         },
-        # {'session_id': 'a3724192-e2b6-4636-b176-3b3028d66230', 'participante': 'P2',
-        # 'trial_names': [
-        #     'escalon_derecho',
-        #     'escalon_izquierdo',
-        #     'estocada_deslizamiento_lateral_derecho',
-        #     'estocada_deslizamiento_lateral_izquierdo',
-        #     'estocada_deslizamiento_posterior_derecho',
-        #     'estocada_deslizamiento_posterior_izquierdo',
-        #     'estocada_izquierda',
-        #     'estocada_lateral_derecha',
-        #     'estocada_lateral_izquierda',
-        #     'sentadilla_60',
-        #     'sentadilla_90'],
-        # 'times': [
-        #     [1.23, 2.34],  # escalón_derecho
-        #     [1.12, 2.22],  # escalón_izquierdo
-        #     [1.45, 2.55, 3.65],  # estocada_deslizamiento_lateral_derecho
-        #     [1.10, 2.20, 3.30],  # estocada_deslizamiento_lateral_izquierdo
-        #     [1.80, 2.90, 3.99],  # estocada_deslizamiento_posterior_derecho
-        #     [1.15, 2.25, 3.35],  # estocada_deslizamiento_posterior_izquierdo
-        #     [1.05, 2.15, 3.25],  # estocada_izquierda
-        #     [1.50, 2.60, 3.70],  # estocada_derecha
-        #     [1.50, 2.60, 3.70],  # estocada_lateral_derecha
-        #     [1.20, 2.30, 3.40],  # estocada_lateral_izquierda
-        #     [1.75, 2.85, 3.95],  # sentadilla_60
-        #     [1.30, 2.40, 3.50]   # sentadilla_90
-        # ]},
+        {'session_id': 'a3724192-e2b6-4636-b176-3b3028d66230', 'participante': 'P2',
+        'trial_names': [
+            'escalon_derecho',
+            'escalon_izquierdo',
+            'estocada_deslizamiento_lateral_derecho',
+            'estocada_deslizamiento_lateral_izquierdo',
+            'estocada_deslizamiento_posterior_derecho',
+            'estocada_deslizamiento_posterior_izquierdo',
+            'estocada_izquierda',
+            'estocada_lateral_derecha',
+            'estocada_lateral_izquierda',
+            'sentadilla_60',
+            'sentadilla_90'],
+        'times': [
+            [1.23, 2.34],  # escalón_derecho
+            [1.12, 2.22],  # escalón_izquierdo
+            [1.45, 2.55, 3.65],  # estocada_deslizamiento_lateral_derecho
+            [1.10, 2.20, 3.30],  # estocada_deslizamiento_lateral_izquierdo
+            [1.80, 2.90, 3.99],  # estocada_deslizamiento_posterior_derecho
+            [1.15, 2.25, 3.35],  # estocada_deslizamiento_posterior_izquierdo
+            [1.05, 2.15, 3.25],  # estocada_izquierda
+            [1.50, 2.60, 3.70],  # estocada_derecha
+            [1.50, 2.60, 3.70],  # estocada_lateral_derecha
+            [1.20, 2.30, 3.40],  # estocada_lateral_izquierda
+            [1.75, 2.85, 3.95],  # sentadilla_60
+            [1.30, 2.40, 3.50]   # sentadilla_90
+        ]},
         # {'session_id': '0199dfe7-2595-471e-8f49-d5a887434357', 'participante': 'P3',
         # 'trial_names': [
         #     'escalón_derecho',
