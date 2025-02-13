@@ -1,5 +1,5 @@
-from funtion_integrate_forceplates import IntegrateForcepalte
-
+from funtion_integrate_forceplates_copy import IntegrateForcepalte
+from data_participantes import participantes
 records = [
     # {
     #     "move": 'sentadilla_60_afuera',
@@ -60,22 +60,22 @@ fails = []
 es = []
 c = 0
 
-for rec in records:
-    
-    try:
-        IntegrateForcepalte(session_id = '7200e234-c206-4945-aa5a-980b0ec502cf',
-                    trial_name = rec['move'] ,
-                    force_gdrive_url = rec['link'])
-        print(f"funciono {rec['move']}")
-    except Exception as e:
-        fails.append(rec['move'])
-        
-        if e not in es:
-            es.append(f'{c}.{e}')
-        # print(f"Error en {rec['move']} error {e}")
-        c += 1
+for participante in participantes:
+    session_id = participante['session_id']
+    for movimiento in participante['movements']:
+        try:
+            IntegrateForcepalte(session_id=session_id,
+                                trial_name=movimiento['move'],
+                                force_gdrive_url=movimiento['link'])
+            print(f"funciono {movimiento['move']}")
+            fines.append(movimiento['move'])
+        except Exception as e:
+            fails.append(movimiento['move'])
+            if e not in es:
+                es.append(f'{c}.{e}')
+            c += 1
 
-print('correctos: ',fines)
-print('errores: ',fails)
-print("type_error: ",len(es))
+print('correctos: ', fines)
+print('errores: ', fails)
+print("type_error: ", len(es))
 print('errors\n', es)
