@@ -10,6 +10,11 @@ import opensim
 
 import utils as ut
 import utilsKinematics
+import re
+
+# Expresión regular para eliminar el número final del nombre del trial
+def extract_movement_name(trial_name):
+    return re.sub(r'_\d+$', '', trial_name)
 
 def extract_data_t(session_id, trial_name, time):
     #'da9fcf0a-3ec2-4990-b1e5-7f0d8dec5d38'
@@ -54,63 +59,63 @@ def extract_data_t(session_id, trial_name, time):
 
 
 data = [
-    {   'session_id': 'da9fcf0a-3ec2-4990-b1e5-7f0d8dec5d38',
-        'participante': 'P1',
-        'trial_names': [
-            'escalon_derecho_1',
-            'escalon_izquierdo_1',
-            'estocada_deslizamiento_lateral_derecho_1',
-            'estocada_deslizamiento_lateral_izquierdo_3',
-            'estocada_deslizamiento_posterior_derecho_1',
-            'estocada_deslizamiento_posterior_izquierdo_3',
-            'estocada_derecha_1',
-            'estocada_izquierda_2',
-            'estocada_lateral_derecha_2',
-            'estocada_lateral_izquierda_1',
-            'sentadilla_60_2',
-            'sentadilla_90_1'],
-        'times': [
-            [4.65, 6.5],  # escalón_derecho 4.65	6.5
-            [3.4, 5.4],  # escalón_izquierdo 3.4	5.4
-            [5.85, 7.817, 10.133],  # estocada_deslizamiento_lateral_derecho 5.85	7.817	10.133
-            [4.6, 5.6, 6.9],  # estocada_deslizamiento_lateral_izquierdo 4.6	5.6	6.9
-            [5.7, 7.3, 8.85],  # estocada_deslizamiento_posterior_derecho 5.7	7.3	8.85
-            [5.85, 7.883, 9.8],  # estocada_deslizamiento_posterior_izquierdo 5.85	7.883	9.8
-            [5.05, 7.6, 9.1],  # estocada_derecha 5.05	7.6	9.1
-            [3.55, 6.467, 9.05],  # estocada_izquierda 3.55	6.467	9.05
-            [6.467, 9.417, 13.333],  # estocada_lateral_derecha 6.467	9.417	13.333
-            [5.933, 9.467, 12.317],  # estocada_lateral_izquierda 5.933	9.467	12.317
-            [6.95, 12.217, 16.1],  # sentadilla_60 6.95	12.217	16.1
-            [5.85, 10.933, 14.283]   # sentadilla_90  5.85	10.92	14.283
-        ]
-        },
-        {'session_id': 'a3724192-e2b6-4636-b176-3b3028d66230', 'participante': 'P2',
-        'trial_names': [
-            'escalon_derecho',
-            'escalon_izquierdo',
-            'estocada_deslizamiento_lateral_derecho',
-            'estocada_deslizamiento_lateral_izquierdo',
-            'estocada_deslizamiento_posterior_derecho',
-            'estocada_deslizamiento_posterior_izquierdo',
-            'estocada_izquierda',
-            'estocada_lateral_derecha',
-            'estocada_lateral_izquierda',
-            'sentadilla_60',
-            'sentadilla_90'],
-        'times': [
-            [1.23, 2.34],  # escalón_derecho
-            [1.12, 2.22],  # escalón_izquierdo
-            [1.45, 2.55, 3.65],  # estocada_deslizamiento_lateral_derecho
-            [1.10, 2.20, 3.30],  # estocada_deslizamiento_lateral_izquierdo
-            [1.80, 2.90, 3.99],  # estocada_deslizamiento_posterior_derecho
-            [1.15, 2.25, 3.35],  # estocada_deslizamiento_posterior_izquierdo
-            [1.05, 2.15, 3.25],  # estocada_izquierda
-            [1.50, 2.60, 3.70],  # estocada_derecha
-            [1.50, 2.60, 3.70],  # estocada_lateral_derecha
-            [1.20, 2.30, 3.40],  # estocada_lateral_izquierda
-            [1.75, 2.85, 3.95],  # sentadilla_60
-            [1.30, 2.40, 3.50]   # sentadilla_90
-        ]},
+        # {'session_id': 'da9fcf0a-3ec2-4990-b1e5-7f0d8dec5d38',
+        # 'participante': 'P1',
+        # 'trial_names': [
+        #     'escalon_derecho_1',
+        #     'escalon_izquierdo_1',
+        #     'estocada_deslizamiento_lateral_derecho_1',
+        #     'estocada_deslizamiento_lateral_izquierdo_3',
+        #     'estocada_deslizamiento_posterior_derecho_1',
+        #     'estocada_deslizamiento_posterior_izquierdo_3',
+        #     'estocada_derecha_1',
+        #     'estocada_izquierda_2',
+        #     'estocada_lateral_derecha_2',
+        #     'estocada_lateral_izquierda_1',
+        #     'sentadilla_60_2',
+        #     'sentadilla_90_1'],
+        # 'times': [
+        #     [4.65, 6.5],  # escalón_derecho 4.65	6.5
+        #     [3.4, 5.4],  # escalón_izquierdo 3.4	5.4
+        #     [5.85, 7.817, 10.133],  # estocada_deslizamiento_lateral_derecho 5.85	7.817	10.133
+        #     [4.6, 5.6, 6.9],  # estocada_deslizamiento_lateral_izquierdo 4.6	5.6	6.9
+        #     [5.7, 7.3, 8.85],  # estocada_deslizamiento_posterior_derecho 5.7	7.3	8.85
+        #     [5.85, 7.883, 9.8],  # estocada_deslizamiento_posterior_izquierdo 5.85	7.883	9.8
+        #     [5.05, 7.6, 9.1],  # estocada_derecha 5.05	7.6	9.1
+        #     [3.55, 6.467, 9.05],  # estocada_izquierda 3.55	6.467	9.05
+        #     [6.467, 9.417, 13.333],  # estocada_lateral_derecha 6.467	9.417	13.333
+        #     [5.933, 9.467, 12.317],  # estocada_lateral_izquierda 5.933	9.467	12.317
+        #     [6.95, 12.217, 16.1],  # sentadilla_60 6.95	12.217	16.1
+        #     [5.85, 10.933, 14.283]   # sentadilla_90  5.85	10.92	14.283
+        # ]
+        # },
+        # {'session_id': 'a3724192-e2b6-4636-b176-3b3028d66230', 'participante': 'P2',
+        # 'trial_names': [
+        #     'escalon_derecho',
+        #     'escalon_izquierdo',
+        #     'estocada_deslizamiento_lateral_derecho',
+        #     'estocada_deslizamiento_lateral_izquierdo',
+        #     'estocada_deslizamiento_posterior_derecho',
+        #     'estocada_deslizamiento_posterior_izquierdo',
+        #     'estocada_izquierda',
+        #     'estocada_lateral_derecha',
+        #     'estocada_lateral_izquierda',
+        #     'sentadilla_60',
+        #     'sentadilla_90'],
+        # 'times': [
+        #     [1.23, 2.34],  # escalón_derecho
+        #     [1.12, 2.22],  # escalón_izquierdo
+        #     [1.45, 2.55, 3.65],  # estocada_deslizamiento_lateral_derecho
+        #     [1.10, 2.20, 3.30],  # estocada_deslizamiento_lateral_izquierdo
+        #     [1.80, 2.90, 3.99],  # estocada_deslizamiento_posterior_derecho
+        #     [1.15, 2.25, 3.35],  # estocada_deslizamiento_posterior_izquierdo
+        #     [1.05, 2.15, 3.25],  # estocada_izquierda
+        #     [1.50, 2.60, 3.70],  # estocada_derecha
+        #     [1.50, 2.60, 3.70],  # estocada_lateral_derecha
+        #     [1.20, 2.30, 3.40],  # estocada_lateral_izquierda
+        #     [1.75, 2.85, 3.95],  # sentadilla_60
+        #     [1.30, 2.40, 3.50]   # sentadilla_90
+        # ]},
         # {'session_id': '0199dfe7-2595-471e-8f49-d5a887434357', 'participante': 'P3',
         # 'trial_names': [
         #     'escalón_derecho',
@@ -787,58 +792,62 @@ data = [
         #     [1.75, 2.85, 3.95],  # sentadilla_60
         #     [1.30, 2.40, 3.50]   # sentadilla_90
         # ]},
-        # {'session_id': '4862ff70-cf69-4ec8-9402-8a8d88b881ef', 'participante': 'P29',
-        # 'trial_names': [
-        #     'escalón_derecho',
-        #     'escalón_izquierdo',
-        #     'estocada_deslizamiento_lateral_derecho',
-        #     'estocada_deslizamiento_lateral_izquierdo',
-        #     'estocada_deslizamiento_posterior_derecho',
-        #     'estocada_deslizamiento_posterior_izquierdo',
-        #     'estocada_izquierda',
-        #     'estocada_lateral_derecha',
-        #     'estocada_lateral_izquierda',
-        #     'sentadilla_60',
-        #     'sentadilla_90'],
-        # 'times': [
-        #     [1.23, 2.34],  # escalón_derecho
-        #     [1.12, 2.22],  # escalón_izquierdo
-        #     [1.45, 2.55, 3.65],  # estocada_deslizamiento_lateral_derecho
-        #     [1.10, 2.20, 3.30],  # estocada_deslizamiento_lateral_izquierdo
-        #     [1.80, 2.90, 3.99],  # estocada_deslizamiento_posterior_derecho
-        #     [1.15, 2.25, 3.35],  # estocada_deslizamiento_posterior_izquierdo
-        #     [1.05, 2.15, 3.25],  # estocada_izquierda
-        #     [1.50, 2.60, 3.70],  # estocada_lateral_derecha
-        #     [1.20, 2.30, 3.40],  # estocada_lateral_izquierda
-        #     [1.75, 2.85, 3.95],  # sentadilla_60
-        #     [1.30, 2.40, 3.50]   # sentadilla_90
-        # ]},
-        # {'session_id': '86713dcf-995b-40e1-8df2-5da494cb170b', 'participante': 'P30',
-        # 'trial_names': [
-        #     'escalón_derecho',
-        #     'escalón_izquierdo',
-        #     'estocada_deslizamiento_lateral_derecho',
-        #     'estocada_deslizamiento_lateral_izquierdo',
-        #     'estocada_deslizamiento_posterior_derecho',
-        #     'estocada_deslizamiento_posterior_izquierdo',
-        #     'estocada_izquierda',
-        #     'estocada_lateral_derecha',
-        #     'estocada_lateral_izquierda',
-        #     'sentadilla_60',
-        #     'sentadilla_90'],
-        # 'times': [
-        #     [1.23, 2.34],  # escalón_derecho
-        #     [1.12, 2.22],  # escalón_izquierdo
-        #     [1.45, 2.55, 3.65],  # estocada_deslizamiento_lateral_derecho
-        #     [1.10, 2.20, 3.30],  # estocada_deslizamiento_lateral_izquierdo
-        #     [1.80, 2.90, 3.99],  # estocada_deslizamiento_posterior_derecho
-        #     [1.15, 2.25, 3.35],  # estocada_deslizamiento_posterior_izquierdo
-        #     [1.05, 2.15, 3.25],  # estocada_izquierda
-        #     [1.50, 2.60, 3.70],  # estocada_lateral_derecha
-        #     [1.20, 2.30, 3.40],  # estocada_lateral_izquierda
-        #     [1.75, 2.85, 3.95],  # sentadilla_60
-        #     [1.30, 2.40, 3.50]   # sentadilla_90
-        # ]},
+        {'session_id': '4862ff70-cf69-4ec8-9402-8a8d88b881ef', 'participante': 'P29',
+        'trial_names': [
+            'escalon_derecho_2', #2   3.55	 4.85
+            'escalon_izquierdo_2', #2	3.95	5
+            'estocada_deslizamiento_lateral_derecho_1',# 1	6.4	7.8	8.95
+            'estocada_deslizamiento_lateral_izquierdo_2', #2	4.3	5.95	6.95
+            'estocada_deslizamiento_posterior_derecho_2',# 2	5.05	7.25	8.25
+            'estocada_deslizamiento_posterior_izquierdo_1',# 1	4.85	6.25	7.55
+            'estocada_derecha_2',# 2	  3.35	  6.1	 9.6
+            'estocada_izquierda_1', #1	4.45	6.65	8.95
+            'estocada_lateral_derecha_1',# 1	5.05	8.25	11.65
+            'estocada_lateral_izquierda_2', #2	5.05	10.1	14.15
+            'sentadilla_60_2',# 2	4.95	7.6	    10.35
+            'sentadilla_90_2'],# 2	3.65	7	10.35
+        'times': [
+            [3.55, 4.85],  # escalón_derecho
+            [3.95, 5],  # escalón_izquierdo
+            [6.4, 7.8, 8.95],  # estocada_deslizamiento_lateral_derecho
+            [4.3, 5.95, 6.95],  # estocada_deslizamiento_lateral_izquierdo
+            [5.05, 7.25, 8.25],  # estocada_deslizamiento_posterior_derecho
+            [4.85, 6.25, 7.55],  # estocada_deslizamiento_posterior_izquierdo
+            [3.35, 6.1,  9.6],  # estocada_derecha
+            [4.45,	6.65,	8.95],  # estocada_izquierda
+            [5.05,	8.25,	11.65],  # estocada_lateral_derecha
+            [5.05,	10.1,	14.1],  # estocada_lateral_izquierda
+            [4.95,	7.6,	    10.35],  # sentadilla_60
+            [3.65,	7,	10.35]   # sentadilla_90
+        ]},
+        {'session_id': '86713dcf-995b-40e1-8df2-5da494cb170b', 'participante': 'P30',
+        'trial_names': [
+            'escalon_derecho_1',# 1	3.85	5.05
+            'escalon_izquierdo_2',# 2	3.85	5.05
+            'estocada_deslizamiento_lateral_derecho_1', #1	5.85	7.25	8.55
+            'estocada_deslizamiento_lateral_izquierdo_2',# 2 	4.55	6.35	7.4
+            'estocada_deslizamiento_posterior_derecho_1',# 1   4.3	 6.2	  7.75
+            'estocada_deslizamiento_posterior_izquierdo_1',# 1	4.85	7.1	  8.2
+            'estocada_derecha_1',# 1	  4.65	 8.7 	12.45
+            'estocada_izquierda_1',# 1	3.95	6.4 	8.45
+            'estocada_lateral_derecha_2',# 2	 5.6	11.2	14.45
+            'estocada_lateral_izquierda_1',# 1	5.65	8.15	10.45
+            'sentadilla_60_1',# 1	4.9	 8.25	10.85
+            'sentadilla_90_1'],# 1	4.55	9.2	 12.35
+        'times': [
+            [3.85,	5.05],  # escalón_derecho
+            [3.85,	5.05],  # escalón_izquierdo
+            [5.85,	7.25,	8.55],  # estocada_deslizamiento_lateral_derecho
+            [4.55,	6.35,	7.4],  # estocada_deslizamiento_lateral_izquierdo
+            [4.3,	 6.2,	  7.75],  # estocada_deslizamiento_posterior_derecho
+            [4.85,	7.1,	  8.2],  # estocada_deslizamiento_posterior_izquierdo
+            [4.65,	 8.7, 	12.45],  # estocada_derecha
+            [3.95,	6.4, 	8.45],  # estocada_izquierda
+            [5.6,	11.2,	14.45],  # estocada_lateral_derecha
+            [5.65,	8.15,	10.45],  # estocada_lateral_izquierda
+            [4.9,	 8.25,	10.85],  # sentadilla_60
+            [4.55,	9.2,	 12.35]   # sentadilla_90
+        ]},
         
 ]
 #========================EXTRAER DATOS UNO X UNO ====================================
@@ -864,36 +873,39 @@ data = [
 # print(df)
 
 #=====================para extraer los datos de los participantes=========================
-movement_dfs = {trial: [] for trial in data[0]['trial_names']}
+movement_dfs = {extract_movement_name(trial): [] for trial in data[0]['trial_names']}
 
 # Procesar los datos
 for participant in data:
     session_id = participant['session_id']
     for trial_name, times in zip(participant['trial_names'], participant['times']):
+        base_trial_name = extract_movement_name(trial_name)  # Obtener el nombre base sin el número
         for time in times:
-            datf = extract_data_t(session_id=session_id, trial_name=trial_name, time=time)
-            # print('datf[time]:',datf['time'])
-            data_for_frame = {
-                'participant': participant['participante'],
-                'time': datf['time'].iloc[0] if not datf['time'].empty else None,
-                'F1-CADSAGITAL I': datf['hip_flexion_l'].iloc[0] if not datf['hip_flexion_l'].empty else None,
-                'F1-CADSAGITAL D': datf['hip_flexion_r'].iloc[0] if not datf['hip_flexion_r'].empty else None,
-                'F1-CADFRONTAL I': datf['hip_adduction_l'].iloc[0] if not datf['hip_adduction_l'].empty else None,
-                'F1-CADFRONTAL D': datf['hip_adduction_r'].iloc[0] if not datf['hip_adduction_r'].empty else None,
-                'F1-CADTRANS I': datf['hip_rotation_l'].iloc[0] if not datf['hip_rotation_l'].empty else None,
-                'F1-CADTRANS D': datf['hip_rotation_r'].iloc[0] if not datf['hip_rotation_r'].empty else None,
-                'F1-RODSAGITAL I': datf['knee_angle_l'].iloc[0] if not datf['knee_angle_l'].empty else None,
-                'F1-RODSAGITAL D': datf['knee_angle_r'].iloc[0] if not datf['knee_angle_r'].empty else None,
-                'F1-TOBILLOSAGITAL I': datf['ankle_angle_l'].iloc[0] if not datf['ankle_angle_l'].empty else None,
-                'F1-TOBILLOSAGITAL D': datf['ankle_angle_r'].iloc[0] if not datf['ankle_angle_r'].empty else None,
-                'F1-TOBILLOFRONTAL I': datf['subtalar_angle_l'].iloc[0] if not datf['subtalar_angle_l'].empty else None,
-                'F1-TOBILLOFRONTAL D': datf['subtalar_angle_r'].iloc[0] if not datf['subtalar_angle_r'].empty else None,
-            }
-            movement_dfs[trial_name].append(data_for_frame)
+            try:
+                datf = extract_data_t(session_id=session_id, trial_name=trial_name, time=time)
+                data_for_frame = {
+                    'participant': participant['participante'],
+                    'time': datf['time'].iloc[0] if not datf['time'].empty else None,
+                    'F1-CADSAGITAL I': datf['hip_flexion_l'].iloc[0] if not datf['hip_flexion_l'].empty else None,
+                    'F1-CADSAGITAL D': datf['hip_flexion_r'].iloc[0] if not datf['hip_flexion_r'].empty else None,
+                    'F1-CADFRONTAL I': datf['hip_adduction_l'].iloc[0] if not datf['hip_adduction_l'].empty else None,
+                    'F1-CADFRONTAL D': datf['hip_adduction_r'].iloc[0] if not datf['hip_adduction_r'].empty else None,
+                    'F1-CADTRANS I': datf['hip_rotation_l'].iloc[0] if not datf['hip_rotation_l'].empty else None,
+                    'F1-CADTRANS D': datf['hip_rotation_r'].iloc[0] if not datf['hip_rotation_r'].empty else None,
+                    'F1-RODSAGITAL I': datf['knee_angle_l'].iloc[0] if not datf['knee_angle_l'].empty else None,
+                    'F1-RODSAGITAL D': datf['knee_angle_r'].iloc[0] if not datf['knee_angle_r'].empty else None,
+                    'F1-TOBILLOSAGITAL I': datf['ankle_angle_l'].iloc[0] if not datf['ankle_angle_l'].empty else None,
+                    'F1-TOBILLOSAGITAL D': datf['ankle_angle_r'].iloc[0] if not datf['ankle_angle_r'].empty else None,
+                    'F1-TOBILLOFRONTAL I': datf['subtalar_angle_l'].iloc[0] if not datf['subtalar_angle_l'].empty else None,
+                    'F1-TOBILLOFRONTAL D': datf['subtalar_angle_r'].iloc[0] if not datf['subtalar_angle_r'].empty else None,
+                }
+                movement_dfs[base_trial_name].append(data_for_frame)
+            except Exception as e:
+                print(f"Error processing {trial_name} at time {time} for participant {participant['participante']}: {e}")
 
 abreviaciones = {
-    "escalón_derecho": "ESCALON D",
-    "escalón_izquierdo": "ESCALON I",
+    "escalon_derecho": "ESCALON D",
+    "escalon_izquierdo": "ESCALON I",
     "estocada_deslizamiento_lateral_derecho": "EST.DESl.LATERAL D",
     "estocada_deslizamiento_lateral_izquierdo": "EST.DESl.LATERAL I",
     "estocada_deslizamiento_posterior_derecho": "EST.DESL.POSTERIOR D",
@@ -909,7 +921,7 @@ abreviaciones = {
 with pd.ExcelWriter('movements_data.xlsx') as writer:
     for trial_name, data_list in movement_dfs.items():
         df = pd.DataFrame(data_list)
-        sheet_name = abreviaciones.get(trial_name.split('_')[0], trial_name)
+        sheet_name = abreviaciones.get(trial_name, trial_name)
 
         # Asegurar que el nombre de la hoja tenga máximo 31 caracteres
         sheet_name = sheet_name[:31]

@@ -166,24 +166,31 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
     # Filter force data
     # Note - it is not great to filter COP data directly. In the example GRF data
     # we filtered raw forces and moments before computing COP.
-    force_threshold = 10  # Ajusta según el nivel de ruido esperado
-    force_right = np.max(np.abs(force_data[:, get_columns(['R_ground_force_vy'], force_headers)]))
-    force_left = np.max(np.abs(force_data[:, get_columns(['L_ground_force_vy'], force_headers)]))
+    force_threshold = 10  # Umbral para detectar si hay apoyo en una plataforma
 
-    if force_right > force_threshold and force_left <= force_threshold:
-        active_leg = 'R'
-        print('se utiliza solo pierna derecha')
-    elif force_left > force_threshold and force_right <= force_threshold:
-        active_leg = 'L'
-        print('se utiliza solo pierna izquierda')
-    elif force_right > force_threshold and force_left > force_threshold:
-        print('force_right: ',force_right)
-        print('force_left: ',force_left)
-        print('promedio_R: ',sum(np.abs(force_data[:, get_columns(['R_ground_force_vy'], force_headers)]))/len(force_data[:, get_columns(['R_ground_force_vy'], force_headers)]))
-        print('promedio_L: ',sum(np.abs(force_data[:, get_columns(['L_ground_force_vy'], force_headers)]))/len(force_data[:, get_columns(['L_ground_force_vy'], force_headers)]))
-        print('se utilizan ambas piernas')
-    else:
-        print("No se detectaron fuerzas significativas en ninguna plataforma o ambas tienen datos.")
+    # Extraer las fuerzas verticales de ambas plataformas
+    force_right_vy = force_data[:, get_columns(['R_ground_force_vy'], force_headers)]
+    force_left_vy = force_data[:, get_columns(['L_ground_force_vy'], force_headers)]
+
+    # Determinar en cada instante qué plataforma tiene fuerza significativa
+    right_active = np.abs(force_right_vy) > force_threshold
+    left_active = np.abs(force_left_vy) > force_threshold
+
+    # Crear una lista de estados en cada tiempo
+    force_status = np.where(right_active & left_active, 'both', 
+                np.where(right_active, 'R', 
+                np.where(left_active, 'L', 'none')))
+    
+    forces_for_cross_corr = np.zeros_like(force_data[:, 0])
+
+    for i in range(len(force_status)):
+        if force_status[i] == 'R':
+            forces_for_cross_corr[i] = force_right_vy[i]
+        elif force_status[i] == 'L':
+            forces_for_cross_corr[i] = force_left_vy[i]
+        elif force_status[i] == 'both':
+            forces_for_cross_corr[i] = force_right_vy[i] + force_left_vy[i]  # Sumar ambas fuerzas
+
 
 
     if filter_force_data:
@@ -202,6 +209,22 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
         
     ## Transform COP from force plates to G
     r_G0_to_C0_expC = np.array((0,-vertical_offset,0))
+
+    for leg in ['R', 'L']:
+        if leg == 'R' and np.any(force_status == 'R'):
+            force_columns = get_columns([leg + '_ground_force_p' + d for d in ['x', 'y', 'z']], force_headers)
+            r_forceOrigin_to_COP_exp_C = force_data[:, force_columns]
+            r_G0_to_COP_exp_G = (r_G0_to_C0_expC + 
+                                r_C0_to_forceOrigin_exp_C[leg] + 
+                                r_forceOrigin_to_COP_exp_C)
+            force_data[:, force_columns] = r_G0_to_COP_exp_G
+        if leg == 'L' and np.any(force_status == 'L'):
+            force_columns = get_columns([leg + '_ground_force_p' + d for d in ['x', 'y', 'z']], force_headers)
+            r_forceOrigin_to_COP_exp_C = force_data[:, force_columns]
+            r_G0_to_COP_exp_G = (r_G0_to_C0_expC + 
+                                r_C0_to_forceOrigin_exp_C[leg] + 
+                                r_forceOrigin_to_COP_exp_C)
+            force_data[:, force_columns] = r_G0_to_COP_exp_G
 
     for leg in ['R','L']:
         force_columns = get_columns([leg + '_ground_force_p' + d for d in directions],force_headers)
@@ -236,32 +259,7 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
     # get body mass from metadata
     mass = opencap_metadata['mass_kg']
 
-    # zero pad the shorter signal
-    #--------------original-----------------------------
-    # dif_lengths = len(forces_for_cross_corr_downsamp) - len(center_of_mass_acc['y'])
-    # if dif_lengths > 0:
-    #     com_signal = np.pad(center_of_mass_acc['y']*mass + mass*9.8, 
-    #                         (int(np.floor(dif_lengths / 2)), 
-    #                         int(np.ceil(dif_lengths / 2))), 
-    #                         'constant',constant_values=0)[:,np.newaxis]
-            
-    #     kinematics_pad_length = int(np.floor(dif_lengths / 2))
-    #     force_signal = forces_for_cross_corr_downsamp
-    #     print('longer is force')
-    #     print("force signal",force_signal.shape)
-    # else:
-    #     force_signal = np.pad(forces_for_cross_corr_downsamp, 
-    #                           (int(np.floor(np.abs(dif_lengths) / 2)), 
-    #                           int(np.ceil(np.abs(dif_lengths) / 2))), 
-    #                           'constant', constant_values=0)
-    #     print(f'shape of dif_lengths: {dif_lengths}')
-    #     print('longer is center_of_mass')
-    #     print(f"Shape of center_of_mass_acc: {center_of_mass_acc.shape}")
-    #     print("force signal",force_signal.shape)
-    #     kinematics_pad_length = 0
-    #     # com_signal = center_of_mass_acc['y'].to_numpy()[:, np.newaxis] * mass + mass * 9.8
-    #     com_signal = center_of_mass_acc['y'].values[:,np.newaxis]*mass + mass*9.8
-    #--------------------------------------------------------------------------
+
     #----------------------modificado--------------------------------------------
     # Calculamos la diferencia de longitudes entre las señales
     dif_lengths = len(forces_for_cross_corr_downsamp) - len(center_of_mass_acc['y'])
@@ -281,28 +279,17 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
         # print("Shape of force_signal:", force_signal.shape)
 
     elif dif_lengths < 0:
-        # center_of_mass_acc['y'] es más largo, entonces debemos ajustar forces_for_cross_corr_downsamp
-        # print(f"Shape of forces_for_cross_corr_downsamp before padding: {forces_for_cross_corr_downsamp.shape}")
         force_signal =forces_for_cross_corr_downsamp
-        # print(force_signal.shape)
-        # force_signal = np.pad(np.squeeze(forces_for_cross_corr_downsamp), 
-        #                     (int(np.floor(np.abs(dif_lengths) / 2)), 
-        #                     int(np.ceil(np.abs(dif_lengths) / 2))), 
-        #                     'constant', constant_values=0)
+
         force_signal = np.pad(forces_for_cross_corr_downsamp, 
                         ((int(np.floor(np.abs(dif_lengths) / 2)), 
                             int(np.ceil(np.abs(dif_lengths) / 2))), 
                         (0, 0)),  # No modificar las columnas
                         'constant', constant_values=0)
 
-        # print(f"Shape of force_signal after padding: {force_signal.shape}")
-        
         com_signal = center_of_mass_acc['y'].values[:, np.newaxis] * mass + mass * 9.8
         kinematics_pad_length = 0
-        # force_signal = force_signal[:, 0] #linea nueva
-        # print('center_of_mass_acc es más largo que forces_for_cross_corr_downsamp')
-        # print("Shape of com_signal:", com_signal.shape)
-        
+                
 
     else:
         # Las longitudes ya son iguales, no es necesario hacer padding
@@ -313,34 +300,9 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
         # print('Las señales ya tienen la misma longitud')
         # print("Shape of com_signal:", com_signal.shape)
         # print("Shape of force_signal:", force_signal.shape)
-    #----------------------------------------------------------------------------------------
-
-
-
-    # Asegúrate de que com_signal y force_signal no tengan dimensiones adicionales (squeeze)
-
-    # compute the lag between GRFs and forces
-    #print("info_com",com_signal)
-    # print('---Before of squeeze-----')
-    # print(f"type of com_signal: {type(com_signal)}")
-    # print(f"Shape of com_signal: {com_signal.shape}")
-    # print(f"type of force_signal: {type(force_signal)}")
-    # print(f"Shape of force_signal: {force_signal.shape}")
-    # com_signal = np.squeeze(com_signal)
-    # force_signal = np.squeeze(force_signal)
-    # print('---After of squeeze-----')
-    # print(f"type of com_signal: {type(com_signal)}")
-    # print(f"Shape of com_signal: {com_signal.shape}")
-    # print(f"type of force_signal: {type(force_signal)}")
-    # print(f"Shape of force_signal: {force_signal.shape}")
-
-    # _,lag = ut.cross_corr(np.squeeze(com_signal),np.squeeze(force_signal),
-    #                     visualize=visualize_synchronization)
-    # lag = lag*0.1
+    
     _,lag = ut.cross_corr_improved(np.squeeze(com_signal),np.squeeze(force_signal),
                                     multCorrGaussianStd=50, window_size=1000, use_fft=True, visualize=False)
-
-    # print(f"Calculated lag: {lag}")
 
     force_data_new = np.copy(force_data)
     force_data_new[:,0] = force_data[:,0] - (-lag+kinematics_pad_length)/framerate_kinematics
