@@ -1,0 +1,2891 @@
+[
+    {
+        "participante": "P23",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23",
+        "movimiento": "escalon_derecho_1",
+        "lag": -0.133
+    },
+    {
+        "participante": "P23",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23",
+        "movimiento": "escalon_derecho_1",
+        "lag": -0.133
+    },
+    {
+        "participante": "P23",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4926667
+    },
+    {
+        "participante": "P23",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.8786667000000001
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.8170000000000002
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.777
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4353333
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P24",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.4713333000000002
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.1683333
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.4866666999999998
+    },
+    {
+        "participante": "P26",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P26",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4243333000000002
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.3533333
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.6100000000000003
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.7266667
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.0333332999999998
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.1866667000000004
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4966666999999996
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P28",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.2966667000000003
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.0866667000000003
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.5633333
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4033333
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.7533333
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.3666667000000001
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.0233333
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.3200000000000003
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P30",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -0.8033332999999998
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4776666999999999
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P25",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.4276667
+    },
+    {
+        "participante": "P26",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P26",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.1106667000000003
+    },
+    {
+        "participante": "P26",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P26",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.338
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P27",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.5499999999999998
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_derecho_1",
+        "lag": -0.9043332999999998
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.2636667
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.3693333
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.1136667000000002
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.7916667000000004
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.6746667000000004
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.7019999999999997
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -2.2026667
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.3559999999999999
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_derecho_2",
+        "lag": -2.2510000000000003
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.888
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.6369999999999998
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.9333333000000001
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.7916667
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -2.0103333
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.7023333
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.3773333
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.1016667000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.5856667
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.071
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.2573333000000002
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.3429999999999997
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.1720000000000002
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P2",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.1373332999999999
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_derecho_1",
+        "lag": -2.592
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_derecho_2",
+        "lag": -0.9936666999999999
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.5309999999999997
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P3",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.407
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.4253332999999997
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.7959999999999998
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.125
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P4",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.496
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.6876666999999999
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.8030000000000002
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.7346667000000002
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P5",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.8619999999999999
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.2803332999999997
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.5
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4533333000000002
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.7813333
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.451
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.2246667000000002
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -0.8256666999999998
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.3219999999999998
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.444
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.908
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.263
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.9656667000000003
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.1950000000000003
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.3103332999999997
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.2440000000000002
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.1880000000000002
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.778
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.501
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -2.1116667
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.3766667
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.3553332999999999
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.3226666999999999
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -2.1006666999999997
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P15",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.2963333000000001
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.8659999999999997
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.9889999999999994
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -0.8490000000000002
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P16",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.456
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_derecho_1",
+        "lag": -5.2706667000000005
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.398
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.4680000000000002
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P17",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.4183333
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.6900000000000004
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.0986667000000003
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.1533333
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P18",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.315
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_derecho_1",
+        "lag": -0.8919999999999999
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.4633333
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.3633332999999999
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P19",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.121
+    },
+    {
+        "participante": "P20",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P20",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.6476667000000003
+    },
+    {
+        "participante": "P20",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P20",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -1.424
+    },
+    {
+        "participante": "P20",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P20",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -0.8439999999999999
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.5310000000000001
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.4726667
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -3.485
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P21",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -3.137
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_derecho_1",
+        "lag": -1.6889999999999996
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_derecho_2",
+        "lag": -1.8976667
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_izquierdo_1",
+        "lag": -2.2976666999999997
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P22",
+        "movimiento": "escalon_izquierdo_2",
+        "lag": -1.5223332999999997
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -1.2766666999999998
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.2446667
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.609
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -1.3719999999999999
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -1.944
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -2.0636666999999997
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5950000000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -0.9773333000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.6793333
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -0.9089999999999998
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 0.31599999999999984
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.5106667000000003
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -2.3693333
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -1.4836667000000001
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.508
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.8183333000000002
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.8046666999999998
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.139
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.9286667
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_derecha_1",
+        "lag": -3.0213332999999993
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P6",
+        "movimiento": "estocada_derecha_2",
+        "lag": -1.5339999999999998
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -1.7396667
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.5416667
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.416
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -0.8233332999999998
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -0.2226667
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.5123333
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.8563333000000002
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.9403332999999998
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.7956666999999995
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_derecha_1",
+        "lag": -1.4813332999999997
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_derecha_2",
+        "lag": -2.0616667
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -1.4726667
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.1083333
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.1493333
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -1.2566667000000002
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -1.4393333
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.6296667
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.4936667000000003
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.6069999999999998
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 0.06999999999999984
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.6463333
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_derecha_1",
+        "lag": -1.6676667000000003
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P8",
+        "movimiento": "estocada_derecha_2",
+        "lag": -1.5553332999999998
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -1.6369999999999998
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.5756667000000002
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.8453332999999996
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -1.4416666999999999
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -1.1519999999999997
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.3619999999999997
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.1916667000000003
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.2356667
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.9836667000000001
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.7263333
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1.4749999999999999
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P9",
+        "movimiento": "estocada_derecha_2",
+        "lag": -1.5373333000000002
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.726
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_derecha_1",
+        "lag": -1.0626666999999999
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_derecha_2",
+        "lag": -1.7233333
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -1.4316667
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.1006667
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.6463333000000002
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -1.4920000000000002
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -1.598
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.4223333
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.8070000000000004
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.8863333000000004
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.4620000000000002
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P10",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.5526666999999998
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_derecha_1",
+        "lag": -0.9766667
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_derecha_2",
+        "lag": -1.8039999999999998
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -1.7223333000000003
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.5213332999999998
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -0.09366669999999999
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -1.6636667000000003
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -0.4866666999999998
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.887
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5113333
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.5863333
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.48
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P11",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.0896667
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_derecha_1",
+        "lag": -1.1933333
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -0.23633330000000008
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.3176667000000002
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.5153332999999998
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -1.3249999999999997
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -1.6326667000000001
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.4049999999999998
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P12",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -2.8666666999999997
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_derecha_1",
+        "lag": 0.7143333000000007
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_derecha_2",
+        "lag": -1.8386667
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -2.3323333
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -1.4823333
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -0.15766670000000005
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -0.8346667000000001
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1.3840000000000001
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -2.1499999999999995
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.4213333000000001
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.3583333
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.755
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.7246667000000002
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_derecha_1",
+        "lag": -1.5366667
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_derecha_2",
+        "lag": -0.2256667000000001
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_1",
+        "lag": -1.899
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_derecho_2",
+        "lag": -0.8370000000000002
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_1",
+        "lag": -1.7883333
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_lateral_izquierdo_2",
+        "lag": -1.4193333000000001
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -0.9289999999999998
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_2",
+        "lag": -1.5986667
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -3.4413333
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_2",
+        "lag": -1.9803333
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_izquierda_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_izquierda_1",
+        "lag": -1.5136667000000001
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_izquierda_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_izquierda_2",
+        "lag": -1.3379999999999999
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.726
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.726
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P7",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.726
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -1.4736667000000003
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -1.4736667000000003
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -1.0706666999999999
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -1.0706666999999999
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -1.4706666999999998
+    },
+    {
+        "participante": "P15",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P15",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -2.1836667
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -0.8366667000000003
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_2",
+        "lag": -1.9033333
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5783333000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5783333000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5783333000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5783333000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5783333000000002
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P1",
+        "movimiento": "estocada_deslizamiento_posterior_izquierdo_1",
+        "lag": -1.5783333000000002
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -5.01
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -0.15666669999999971
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -0.15666669999999971
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -0.15666669999999971
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P29",
+        "movimiento": "estocada_deslizamiento_posterior_derecho_1",
+        "lag": -1.5733332999999998
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": -1.2220000000000004
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho-2",
+        "lag": -1.3730000000000002
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-1",
+        "lag": -1.6516666999999998
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-2",
+        "lag": -3.4756667
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": -1.2976666999999997
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-2",
+        "lag": -1.0706667000000003
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-1",
+        "lag": -1.9899999999999998
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-2",
+        "lag": -2.702
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": -1.5976666999999996
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": -1.9830000000000005
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho-2",
+        "lag": -2.185
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-1",
+        "lag": -2.3856667
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-izquierda-2",
+        "lag": -2.6626667000000004
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": -1.5976666999999996
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-derecha-2",
+        "lag": -1.0706667000000003
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-1",
+        "lag": -1.9899999999999998
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": -1.9830000000000005
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P23N",
+        "movimiento": "Desliza-post-izquierda-2",
+        "lag": -2.702
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-derecho",
+        "lag": -1.9830000000000005
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-derecho-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-derecho-2",
+        "lag": -2.185
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-izquierda-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-izquierda-1",
+        "lag": -2.3856667
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-izquierda-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-lat-izquierda-2",
+        "lag": -2.6626667000000004
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-derecha-1",
+        "lag": -1.5976666999999996
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-derecha-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-derecha-2",
+        "lag": -1.0706667000000003
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-izquierda-1",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-izquierda-1",
+        "lag": -1.9899999999999998
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-izquierda-2",
+        "lag": 1000
+    },
+    {
+        "participante": "P22N",
+        "movimiento": "Desliza-post-izquierda-2",
+        "lag": -2.702
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": -1.2786667
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": -1.6746667
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P13",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": -1.6613333000000003
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P14",
+        "movimiento": "estocada_lateral_derecha_1",
+        "lag": -1.4796667000000001
+    },
+    {
+        "participante": "P21",
+        "movimiento": "sentadilla_60_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P21",
+        "movimiento": "sentadilla_60_1",
+        "lag": -0.9296667000000003
+    },
+    {
+        "participante": "P21",
+        "movimiento": "sentadilla_60_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P21",
+        "movimiento": "sentadilla_60_2",
+        "lag": -1.5603333000000001
+    },
+    {
+        "participante": "P24",
+        "movimiento": "sentadilla_60_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P24",
+        "movimiento": "sentadilla_60_1",
+        "lag": -1.3196667
+    },
+    {
+        "participante": "P24",
+        "movimiento": "sentadilla_60_2",
+        "lag": 1000
+    },
+    {
+        "participante": "P24",
+        "movimiento": "sentadilla_60_2",
+        "lag": -1.5343333
+    },
+    {
+        "participante": "P25",
+        "movimiento": "sentadilla_60_1",
+        "lag": 1000
+    },
+    {
+        "participante": "P25",
+        "movimiento": "sentadilla_60_1",
+        "lag": 1000
+    }]

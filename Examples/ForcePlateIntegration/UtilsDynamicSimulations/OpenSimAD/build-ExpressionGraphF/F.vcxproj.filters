@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\OpenCap_valle\Proyecto_plataforma\opencap-processing\Examples\ForcePlateIntegration\Data\P1\da9fcf0a-3ec2-4990-b1e5-7f0d8dec5d38\OpenSimData\Model\ExternalFunction\F.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\OpenCap_valle\Proyecto_plataforma\opencap-processing\Examples\ForcePlateIntegration\UtilsDynamicSimulations\OpenSimAD\buildExpressionGraph\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2436E0F1-0A7B-3C96-8AF7-06AE627B9CA5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

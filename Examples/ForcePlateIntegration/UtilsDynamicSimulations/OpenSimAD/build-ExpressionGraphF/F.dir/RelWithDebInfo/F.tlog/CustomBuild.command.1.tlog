@@ -1,0 +1,10 @@
+^C:\OPENCAP_VALLE\PROYECTO_PLATAFORMA\OPENCAP-PROCESSING\EXAMPLES\FORCEPLATEINTEGRATION\UTILSDYNAMICSIMULATIONS\OPENSIMAD\BUILDEXPRESSIONGRAPH\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/OpenCap_valle/Proyecto_plataforma/opencap-processing/Examples/ForcePlateIntegration/UtilsDynamicSimulations/OpenSimAD/buildExpressionGraph -BC:/OpenCap_valle/Proyecto_plataforma/opencap-processing/Examples/ForcePlateIntegration/UtilsDynamicSimulations/OpenSimAD/build-ExpressionGraphF --check-stamp-file C:/OpenCap_valle/Proyecto_plataforma/opencap-processing/Examples/ForcePlateIntegration/UtilsDynamicSimulations/OpenSimAD/build-ExpressionGraphF/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

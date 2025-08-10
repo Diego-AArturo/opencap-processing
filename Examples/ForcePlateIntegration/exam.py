@@ -1,33 +1,40 @@
+import json
+import time
+from funtion_integrate_forceplates_legs import IntegrateForcepalte_legs
+from funtion_clean_forceplates0 import IntegrateForcepalte_vc0
 
-abreviaciones = {
-    "escalon_derecho": "ESCALON D",
-    "escalon_izquierdo": "ESCALON I",
-    "estocada_deslizamiento_lateral_derecho": "EST.DESl.LATERAL D",
-    "estocada_deslizamiento_lateral_izquierdo": "EST.DESl.LATERAL I",
-    "estocada_deslizamiento_posterior_derecho": "EST.DESL.POSTERIOR D",
-    "estocada_deslizamiento_posterior_izquierdo": "EST.DESL.POSTERIOR I",
-    "estocada_derecha": "EST.POSTERIOR D",
-    "estocada_izquierda": "EST.POSTERIOR I",
-    "estocada_lateral_derecha": "EST.LATERAL D",
-    "estocada_lateral_izquierda": "EST.LATERAL I",
-    "sentadilla_60": "SENT 60",
-    "sentadilla_90": "SENT 90"
-}
+# from data_participantes import participantes
+def buscar_valor(lista, clave, valor_buscado):
+    """
+    Busca un valor dentro de una lista de diccionarios.
 
-trial_names =  [
-            'escalon_derecho_1',
-            'escalon_izquierdo_1',
-            'estocada_deslizamiento_lateral_derecho_1',
-            'estocada_deslizamiento_lateral_izquierdo_1',
-            'estocada_deslizamiento_posterior_derecho_1',
-            'estocada_deslizamiento_posterior_izquierdo_1',
-            'estocada_izquierda_1',
-            'estocada_lateral_derecha_1',
-            'estocada_lateral_izquierda_1',
-            'sentadilla_60_1',
-            'sentadilla_90_1']
+    :param lista: Lista de diccionarios.
+    :param clave: Clave dentro del diccionario donde se buscará el valor.
+    :param valor_buscado: Valor que se desea encontrar.
+    :return: Lista de diccionarios que contienen el valor buscado.
+    """
+    resultados = [item for item in lista if item.get(clave) == valor_buscado]
+    return resultados[0]
 
-for trial_name in trial_names:
-        
-        sheet_name = abreviaciones.get(trial_name, trial_name)
-        print(trial_name.split('_'),": ",len(trial_name.split('_')))
+with open('participantes.json', 'r') as file:
+    participantes = json.load(file)
+
+participante = participantes[2]
+participante['movements']
+movimiento = buscar_valor(participante['movements'], 'move', 'sentadilla_90_1')
+print(f'Inicio del proceso ', participante['participant_id'])
+# IntegrateForcepalte_vc0(
+#                 session_id=participante['session_id'],
+#                 trial_name=movimiento['move'],
+#                 force_gdrive_url=movimiento['link'],
+#                 participant_id=participante['participant_id'],
+#             )
+
+IntegrateForcepalte_legs(session_id=participante['session_id'],
+                trial_name=movimiento['move'],
+                force_gdrive_url=movimiento['link'],
+                participant_id=participante['participant_id'],
+                legs='R')
+print(f'Fin del proceso ', participante['participant_id'], participante['session_id'])
+
+

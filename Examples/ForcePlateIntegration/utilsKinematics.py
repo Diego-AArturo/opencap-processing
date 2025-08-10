@@ -239,7 +239,7 @@ class kinematics:
             (np.expand_dims(self.time, axis=1), Qs), axis=1)
         columns = ['time'] + self.columnLabels            
         self.coordinate_values = pd.DataFrame(data=data, columns=columns)
-        
+        # print(self.coordinate_values.columns)
         return self.coordinate_values
     
     def get_coordinate_speeds(self, in_degrees=True, 
@@ -492,18 +492,21 @@ class kinematics:
 
     def get_ranges_of_motion(self, in_degrees=True, lowpass_cutoff_frequency=-1):
         
+
         self.get_coordinate_values(
             in_degrees=in_degrees, 
             lowpass_cutoff_frequency=lowpass_cutoff_frequency)
         
         # Compute ranges of motion.        
         ROM = {}
-        for c, coord in enumerate(self.coordinates):
-            ROM[coord] = {}
-            ROM[coord]['min'] = self.coordinate_values[coord].min()
-            ROM[coord]['max'] = self.coordinate_values[coord].max()
-            ROM[coord]['amplitude'] = (
-                self.coordinate_values[coord].max() - 
-                self.coordinate_values[coord].min())
-            
+        try:
+            for c, coord in enumerate(self.coordinates):
+                ROM[coord] = {}
+                ROM[coord]['min'] = self.coordinate_values[coord].min()
+                ROM[coord]['max'] = self.coordinate_values[coord].max()
+                ROM[coord]['amplitude'] = (
+                    self.coordinate_values[coord].max() - 
+                    self.coordinate_values[coord].min())
+        except Exception as e:
+            e
         return ROM 

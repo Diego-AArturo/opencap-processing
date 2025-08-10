@@ -795,22 +795,7 @@ def cross_corr(y1, y2,multCorrGaussianStd=None,visualize=False):
     
     return max_corr, lag
 
-def downsample(data,time,framerate_in,framerate_out):
-    # Calculate the downsampling factor
-    downsampling_factor = framerate_in / framerate_out
-    print("downsampling_factor",downsampling_factor)
-    # Create new indices for downsampling
-    original_indices = np.arange(len(data))
-    new_indices = np.arange(0, len(data), downsampling_factor)
-    
-    # Perform downsampling with interpolation
-    downsampled_data = np.ndarray((len(new_indices), data.shape[1]))
-    for i in range(data.shape[1]):
-        downsampled_data[:,i] = np.interp(new_indices, original_indices, data[:,i])
-    
-    downsampled_time = np.interp(new_indices, original_indices, time)
-    
-    return downsampled_time, downsampled_data
+
 
 # %%  Storage file to dataframe.
 def storage_to_dataframe(storage_file, headers):
@@ -1177,58 +1162,58 @@ def download_session(session_id, sessionBasePath= None,
         post_file_to_trial(session_zip,dynamic_ids[-1],tag='session_zip',
                            device_id='all')    
     
-# def cross_corr(y1, y2,multCorrGaussianStd=None,visualize=False):
-#     """Calculates the cross correlation and lags without normalization.
+def cross_corr(y1, y2,multCorrGaussianStd=None,visualize=False):
+    """Calculates the cross correlation and lags without normalization.
     
-#     The definition of the discrete cross-correlation is in:
-#     https://www.mathworks.com/help/matlab/ref/xcorr.html
+    The definition of the discrete cross-correlation is in:
+    https://www.mathworks.com/help/matlab/ref/xcorr.html
     
-#     Args:
-#     y1, y2: Should have the same length.
+    Args:
+    y1, y2: Should have the same length.
     
-#     Returns:
-#     max_corr: Maximum correlation without normalization.
-#     lag: The lag in terms of the index.
-#     """
-#     # Pad shorter signal with 0s
+    Returns:
+    max_corr: Maximum correlation without normalization.
+    lag: The lag in terms of the index.
+    """
+    # Pad shorter signal with 0s
     
-#     if len(y1) > len(y2):
-#         temp = np.zeros(len(y1))
-#         temp[0:len(y2)] = y2
-#         y2 = np.copy(temp)
-#     elif len(y2)>len(y1):
-#         temp = np.zeros(len(y2))
-#         temp[0:len(y1)] = y1
-#         y1 = np.copy(temp)
+    if len(y1) > len(y2):
+        temp = np.zeros(len(y1))
+        temp[0:len(y2)] = y2
+        y2 = np.copy(temp)
+    elif len(y2)>len(y1):
+        temp = np.zeros(len(y2))
+        temp[0:len(y1)] = y1
+        y1 = np.copy(temp)
         
-#     y1_auto_corr = np.dot(y1, y1) / len(y1)
-#     y2_auto_corr = np.dot(y2, y2) / len(y2)
-#     corr = np.correlate(y1, y2, mode='same')
-#     # The unbiased sample size is N - lag.
-#     unbiased_sample_size = np.correlate(np.ones(len(y1)), np.ones(len(y1)), mode='same')
-#     corr = corr / unbiased_sample_size / np.sqrt(y1_auto_corr * y2_auto_corr)
-#     shift = len(y1) // 2
-#     max_corr = np.max(corr)
-#     argmax_corr = np.argmax(corr)    
+    y1_auto_corr = np.dot(y1, y1) / len(y1)
+    y2_auto_corr = np.dot(y2, y2) / len(y2)
+    corr = np.correlate(y1, y2, mode='same')
+    # The unbiased sample size is N - lag.
+    unbiased_sample_size = np.correlate(np.ones(len(y1)), np.ones(len(y1)), mode='same')
+    corr = corr / unbiased_sample_size / np.sqrt(y1_auto_corr * y2_auto_corr)
+    shift = len(y1) // 2
+    max_corr = np.max(corr)
+    argmax_corr = np.argmax(corr)    
         
-#     if visualize:
-#         plt.figure()
-#         plt.plot(corr)
-#         plt.title('vertical velocity correlation')
+    if visualize:
+        plt.figure()
+        plt.plot(corr)
+        plt.title('vertical velocity correlation')
         
-#     # Multiply correlation curve by gaussian (prioritizing lag solution closest to 0)
-#     if multCorrGaussianStd is not None:
-#         corr = np.multiply(corr,gaussian(len(corr),multCorrGaussianStd))
-#         if visualize: 
-#             plt.plot(corr,color=[.4,.4,.4])
-#             plt.legend(['corr','corr*gaussian'])  
+    # Multiply correlation curve by gaussian (prioritizing lag solution closest to 0)
+    if multCorrGaussianStd is not None:
+        corr = np.multiply(corr,gaussian(len(corr),multCorrGaussianStd))
+        if visualize: 
+            plt.plot(corr,color=[.4,.4,.4])
+            plt.legend(['corr','corr*gaussian'])  
     
-#     argmax_corr = np.argmax(corr)
-#     max_corr = np.nanmax(corr)
+    argmax_corr = np.argmax(corr)
+    max_corr = np.nanmax(corr)
     
-#     lag = argmax_corr-shift
+    lag = argmax_corr-shift
     
-#     return max_corr, lag
+    return max_corr, lag
     
 
 
@@ -1318,19 +1303,42 @@ def cross_corr_improved(y1, y2, multCorrGaussianStd=None, window_size=None, use_
 
 
 
-def downsample(data,time,framerate_in,framerate_out):
-    # Calculate the downsampling factor
+# def downsample(data,time,framerate_in,framerate_out):
+#     # Calculate the downsampling factor
+#     downsampling_factor = framerate_in / framerate_out
+    
+#     # Create new indices for downsampling
+#     original_indices = np.arange(len(data))
+#     new_indices = np.arange(0, len(data), downsampling_factor)
+#     print('downsampling_factor: ',downsampling_factor)
+#     print('original_indices: ', len(original_indices))
+#     print('new_indices: ', len(new_indices))
+#     # Perform downsampling with interpolation
+#     downsampled_data = np.ndarray((len(new_indices), data.shape[1]))
+#     for i in range(data.shape[1]):
+#         downsampled_data[:,i] = np.interp(new_indices, original_indices, data[:,i])
+    
+#     downsampled_time = np.interp(new_indices, original_indices, time)
+    
+#     return downsampled_time, downsampled_data
+#%%
+def downsample(data, time, framerate_in, framerate_out):
+    from scipy.interpolate import interp1d
+    from scipy.signal import resample, medfilt
     downsampling_factor = framerate_in / framerate_out
     
-    # Create new indices for downsampling
     original_indices = np.arange(len(data))
     new_indices = np.arange(0, len(data), downsampling_factor)
-    
-    # Perform downsampling with interpolation
-    downsampled_data = np.ndarray((len(new_indices), data.shape[1]))
-    for i in range(data.shape[1]):
-        downsampled_data[:,i] = np.interp(new_indices, original_indices, data[:,i])
-    
+    # print('downsampling_factor: ',downsampling_factor)
+    # print('original_indices: ', len(original_indices))
+    # print('new_indices: ', len(new_indices))
+    interp_func = interp1d(original_indices, data, kind='linear', fill_value="extrapolate", axis=0)
+    downsampled_data = interp_func(new_indices)
+
+    num_samples = int(len(data) * (framerate_out / framerate_in)) #extra
+    forces_for_cross_corr_downsamp = resample(data, num_samples) #extra
+
     downsampled_time = np.interp(new_indices, original_indices, time)
-    
-    return downsampled_time, downsampled_data
+
+    return downsampled_time, forces_for_cross_corr_downsamp
+

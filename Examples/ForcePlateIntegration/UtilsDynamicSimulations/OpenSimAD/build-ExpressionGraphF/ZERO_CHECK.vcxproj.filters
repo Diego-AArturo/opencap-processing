@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\OpenCap_valle\Proyecto_plataforma\opencap-processing\Examples\ForcePlateIntegration\UtilsDynamicSimulations\OpenSimAD\build-ExpressionGraphF\CMakeFiles\9dccf97141595eccb73ae5d406c79a3d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F06317FE-2AF7-3764-BD0F-3F20753B7098}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

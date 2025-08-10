@@ -48,24 +48,12 @@ from utilsProcessing import lowPassFilter
 from utilsPlotting import plot_dataframe
 import utilsKinematics
 
-# %% User-defined variables.
+
 def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
-    # OpenCap session information from url.
-    # View example at https://app.opencap.ai/session/9eea5bf0-a550-4fa5-bc69-f5f072765848
-
-    # session_id = '7200e234-c206-4945-aa5a-980b0ec502cf'
-
-    # session_id = 'de942f41-e6bb-4b61-96ee-132fefe4dc9d'
-    #trial_name = 'jump2'
-
-    # trial_name = 'estocada_lateral_derecha_adentro_modificada'
-
-    # Specify where to download the kinematic data. Make sure there are no spaces
-    # in this path.
+    
     data_folder = os.path.abspath(os.path.join(script_folder,'Data', session_id))
 
-# Path and filename for force data. Should be a *.mot file of forces applied
-# to right and left foot.
+
     force_dir = os.path.join(data_folder,'MeasuredForces',trial_name)
     force_path = os.path.join(force_dir,f'{trial_name}_forces.mot')
     # force_path = os.path.join(force_dir,f'{trial_name}.mot')
@@ -74,13 +62,6 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
     # can be deleted if your force_path points to a local file.
     os.makedirs(force_dir,exist_ok=True)
 
-    # if not os.path.exists(force_path):
-    #     raise FileNotFoundError(f"El archivo de fuerzas {force_path} no se encontró. Verifica la ruta.")
-
-
-    # force_gdrive_url = 'https://drive.google.com/uc?id=1Uppzkskn7OiJ5GncNT2sl35deX_U3FTN&export=download'
-    # --------usar si es web------------------------
-    # force_gdrive_url = 'https://drive.usercontent.google.com/u/2/uc?id=1-8bc4yZv0Ot8i0D6cczgXXQPBCyFrdCy&export=download'
     response = requests.get(force_gdrive_url)
     with open(force_path, 'wb') as f:
         f.write(response.content)  
@@ -91,21 +72,7 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
     filter_force_data = True
     filter_kinematics_data = True
 
-    ## Transform from force reference frame to OpenCap reference frame.
-    # We will use 4 reference frames G, C, R, and L:
-    # C (checkerboard) and G (ground) are aligned and axes are defined by checkerboard. 
-    # You should always have a black square in the top left corner, and the board 
-    # should be on its side.
-    # x out of board, y up, z away from checkers (left if looking at board). 
-    # Origin (C0) is the top left black-to-black corner; 
-    # Origin (G0) defined as opencap as the lowest point in the trial. There is a 
-    # vertical offset value in the opencap data that defines r_C0_to_G0
-    # Both kinematic and force data will be output in G.
-    # R and L are the frames for the force plate data with origins R0 and L0.
-
-    ## Position from checkerboard origin to force plate origin expressed in C.
-    # You will need to measure this and position the checkerboard consistently for every
-    # collection. 
+    
 
     r_C0_to_forceOrigin_exp_C = {'R': [0,-.191,.083],
                                 'L': [0,-.191,.083]}
@@ -161,30 +128,7 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
     force_data = forces_structure.view(np.float64).reshape(forces_structure.shape + (-1,))
     force_headers = forces_structure.dtype.names
 
-    # %%
-
-    # Filter force data
-    # Note - it is not great to filter COP data directly. In the example GRF data
-    # we filtered raw forces and moments before computing COP.
-    force_threshold = 10  # Ajusta según el nivel de ruido esperado
-    force_right = np.max(np.abs(force_data[:, get_columns(['R_ground_force_vy'], force_headers)]))
-    force_left = np.max(np.abs(force_data[:, get_columns(['L_ground_force_vy'], force_headers)]))
-
-    if force_right > force_threshold and force_left <= force_threshold:
-        active_leg = 'R'
-        print('se utiliza solo pierna derecha')
-    elif force_left > force_threshold and force_right <= force_threshold:
-        active_leg = 'L'
-        print('se utiliza solo pierna izquierda')
-    elif force_right > force_threshold and force_left > force_threshold:
-        print('force_right: ',force_right)
-        print('force_left: ',force_left)
-        print('promedio_R: ',sum(np.abs(force_data[:, get_columns(['R_ground_force_vy'], force_headers)]))/len(force_data[:, get_columns(['R_ground_force_vy'], force_headers)]))
-        print('promedio_L: ',sum(np.abs(force_data[:, get_columns(['L_ground_force_vy'], force_headers)]))/len(force_data[:, get_columns(['L_ground_force_vy'], force_headers)]))
-        print('se utilizan ambas piernas')
-    else:
-        print("No se detectaron fuerzas significativas en ninguna plataforma o ambas tienen datos.")
-
+    
 
     if filter_force_data:
         force_data[:,1:] = lowPassFilter(force_data[:,0], force_data[:,1:],
@@ -236,31 +180,6 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
     # get body mass from metadata
     mass = opencap_metadata['mass_kg']
 
-    # zero pad the shorter signal
-    #--------------original-----------------------------
-    # dif_lengths = len(forces_for_cross_corr_downsamp) - len(center_of_mass_acc['y'])
-    # if dif_lengths > 0:
-    #     com_signal = np.pad(center_of_mass_acc['y']*mass + mass*9.8, 
-    #                         (int(np.floor(dif_lengths / 2)), 
-    #                         int(np.ceil(dif_lengths / 2))), 
-    #                         'constant',constant_values=0)[:,np.newaxis]
-            
-    #     kinematics_pad_length = int(np.floor(dif_lengths / 2))
-    #     force_signal = forces_for_cross_corr_downsamp
-    #     print('longer is force')
-    #     print("force signal",force_signal.shape)
-    # else:
-    #     force_signal = np.pad(forces_for_cross_corr_downsamp, 
-    #                           (int(np.floor(np.abs(dif_lengths) / 2)), 
-    #                           int(np.ceil(np.abs(dif_lengths) / 2))), 
-    #                           'constant', constant_values=0)
-    #     print(f'shape of dif_lengths: {dif_lengths}')
-    #     print('longer is center_of_mass')
-    #     print(f"Shape of center_of_mass_acc: {center_of_mass_acc.shape}")
-    #     print("force signal",force_signal.shape)
-    #     kinematics_pad_length = 0
-    #     # com_signal = center_of_mass_acc['y'].to_numpy()[:, np.newaxis] * mass + mass * 9.8
-    #     com_signal = center_of_mass_acc['y'].values[:,np.newaxis]*mass + mass*9.8
     #--------------------------------------------------------------------------
     #----------------------modificado--------------------------------------------
     # Calculamos la diferencia de longitudes entre las señales
@@ -281,27 +200,18 @@ def IntegrateForcepalte(session_id, trial_name, force_gdrive_url):
         # print("Shape of force_signal:", force_signal.shape)
 
     elif dif_lengths < 0:
-        # center_of_mass_acc['y'] es más largo, entonces debemos ajustar forces_for_cross_corr_downsamp
-        # print(f"Shape of forces_for_cross_corr_downsamp before padding: {forces_for_cross_corr_downsamp.shape}")
+        
         force_signal =forces_for_cross_corr_downsamp
-        # print(force_signal.shape)
-        # force_signal = np.pad(np.squeeze(forces_for_cross_corr_downsamp), 
-        #                     (int(np.floor(np.abs(dif_lengths) / 2)), 
-        #                     int(np.ceil(np.abs(dif_lengths) / 2))), 
-        #                     'constant', constant_values=0)
+        
         force_signal = np.pad(forces_for_cross_corr_downsamp, 
                         ((int(np.floor(np.abs(dif_lengths) / 2)), 
                             int(np.ceil(np.abs(dif_lengths) / 2))), 
                         (0, 0)),  # No modificar las columnas
                         'constant', constant_values=0)
-
-        # print(f"Shape of force_signal after padding: {force_signal.shape}")
         
         com_signal = center_of_mass_acc['y'].values[:, np.newaxis] * mass + mass * 9.8
         kinematics_pad_length = 0
-        # force_signal = force_signal[:, 0] #linea nueva
-        # print('center_of_mass_acc es más largo que forces_for_cross_corr_downsamp')
-        # print("Shape of com_signal:", com_signal.shape)
+        
         
 
     else:
